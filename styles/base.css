@@ -1,0 +1,129 @@
+/* ===== General Reset ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f7fa;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ===== Header ===== */
+.header {
+  width: 100%;
+}
+.header-top {
+  background-color: #0056b3; /* blue */
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+.header-bottom {
+  background-color: #000; /* black */
+  text-align: center;
+  padding: 0.75rem;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav a:hover {
+  color: #ffcc00;
+}
+
+/* ===== Main Layout ===== */
+.main-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+@media (max-width: 900px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Boxes ===== */
+.box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.box-header {
+  background-color: #0056b3;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+.box-header h2 {
+  font-size: 1.25rem;
+}
+.box-body {
+  padding: 1.25rem;
+}
+
+/* ===== About Me Section ===== */
+.about-me .personal,
+.about-me .uganda {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.about-me .profile-img,
+.about-me .uganda-flag {
+  width: 130px;
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+.about-me .text p {
+  text-align: justify;
+  font-size: 1rem;
+}
+.about-me strong {
+  color: #0056b3;
+}
+
+/* ===== Web Dev Resources ===== */
+.resources .resource-list {
+  list-style: none;
+}
+.resources .resource-list li {
+  margin-bottom: 0.75rem;
+}
+.resources .resource-list a {
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.resources .resource-list a:hover {
+  text-decoration: underline;
+  color: #003f80;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background-color: #0056b3;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.95rem;
+}
+.footer p {
+  margin: 0.3rem 0;
+}

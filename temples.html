@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Album</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/temples.css">
+<link rel="stylesheet" href="styles/temples-large.css">
+<script defer src="scripts/temples.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <h1>Temple Album</h1>
+      <button class="hamburger" id="hamburger">&#9776;</button>
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="#" data-filter="all" class="active">Home</a></li>
+          <li><a href="#" data-filter="old">Old</a></li>
+          <li><a href="#" data-filter="new">New</a></li>
+          <li><a href="#" data-filter="large">Large</a></li>
+          <li><a href="#" data-filter="small">Small</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1>Our Favorite Temples</h1>
+    <div class="album-grid fade-in">
+      <figure data-category="old large">
+        <img src="images/temple 1.webp" alt="Salt Lake Temple" class="lightbox-trigger">
+        <figcaption>
+          Salt Lake Temple<br>
+          A magnificent historic temple set amidst serene gardens, offering spiritual peace and architectural wonder for all visitors.
+        </figcaption>
+      </figure>
+      <figure data-category="new large">
+        <img src="images/temple 2.webp" alt="Rome Italy Temple" class="lightbox-trigger">
+        <figcaption>
+          Rome Italy Temple<br>
+          Stunning temple in the heart of Rome with intricate carvings, rich history, and an awe-inspiring sacred atmosphere.
+        </figcaption>
+      </figure>
+      <figure data-category="new small">
+        <img src="images/temple 3.webp" alt="Paris France Temple" class="lightbox-trigger">
+        <figcaption>
+          Paris France Temple<br>
+          Beautifully designed temple blending classical elegance with peaceful surroundings, perfect for quiet reflection and photography.
+        </figcaption>
+      </figure>
+      <figure data-category="old small">
+        <img src="images/temple 4.webp" alt="Tokyo Japan Temple" class="lightbox-trigger">
+        <figcaption>
+          Tokyo Japan Temple<br>
+          Traditional Japanese temple surrounded by lush greenery, tranquil ponds, and harmonious architecture capturing cultural essence.
+        </figcaption>
+      </figure>
+      <figure data-category="old large">
+        <img src="images/temple 5.webp" alt="London England Temple" class="lightbox-trigger">
+        <figcaption>
+          London England Temple<br>
+          Majestic temple with stunning gothic design, offering a serene spiritual retreat in the bustling city of London.
+        </figcaption>
+      </figure>
+      <figure data-category="new large">
+        <img src="images/temple 6.webp" alt="Sydney Australia Temple" class="lightbox-trigger">
+        <figcaption>
+          Sydney Australia Temple<br>
+          A modern architectural marvel overlooking scenic landscapes, providing visitors a peaceful escape and spiritual enlightenment.
+        </figcaption>
+      </figure>
+      <figure data-category="old small">
+        <img src="images/temple 7.webp" alt="Mexico City Temple" class="lightbox-trigger">
+        <figcaption>
+          Mexico City Temple<br>
+          Historical temple with vibrant decorations, rich heritage, and a welcoming environment that inspires awe and admiration.
+        </figcaption>
+      </figure>
+      <figure data-category="new small">
+        <img src="images/temple 8.webp" alt="New Delhi India Temple" class="lightbox-trigger">
+        <figcaption>
+          New Delhi India Temple<br>
+          Elegant temple showcasing Indian craftsmanship and spirituality, surrounded by gardens and tranquil meditation areas.
+        </figcaption>
+      </figure>
+      <figure data-category="old large">
+        <img src="images/temple 9.webp" alt="Toronto Canada Temple" class="lightbox-trigger">
+        <figcaption>
+          Toronto Canada Temple<br>
+          Iconic temple combining modern and traditional elements, offering visitors a magical experience of peace and reflection.
+        </figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p class="footer-text">
+      © 2025 
+      <img src="images/flower 1.webp" alt="flower" class="footer-icon"> 
+      Mike George Okello 
+      <img src="images/flower 1.webp" alt="flower" class="footer-icon"> 
+      Uganda
+    </p>
+    <p class="footer-modified">
+      Last Modification: <span id="lastModified"></span>
+    </p>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+</body>
+</html>

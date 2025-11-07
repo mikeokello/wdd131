@@ -1,0 +1,140 @@
+/* ===== Large Screen Styles ===== */
+@media screen and (min-width: 1024px) {
+
+  /* Hero/Main Header */
+  .hero {
+    padding: 8rem 2rem;
+    text-align: center;
+  }
+  .hero h2 {
+    font-size: 3rem;
+    color: #1e3799;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  }
+  .hero p {
+    font-size: 1.3rem;
+    color: #333;
+    margin-top: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Album Grid */
+  .album-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    padding: 2rem 0;
+  }
+
+  figure {
+    width: 100%;
+    max-width: 350px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    cursor: pointer;
+    position: relative;
+  }
+
+  figure:hover {
+    transform: scale(1.08);
+    box-shadow: 0 20px 30px rgba(255, 138, 0, 0.4);
+  }
+
+  figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #eee;
+    transition: transform 0.4s ease;
+  }
+
+  figure:hover img {
+    transform: scale(1.05);
+  }
+
+  figcaption {
+    padding: 1rem;
+    text-align: center;
+    background: linear-gradient(120deg, #f5f5f5, #e0e0e0);
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.4;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  figure:hover figcaption {
+    background: linear-gradient(120deg, #ffecd2, #fcb69f);
+    color: #1e3799;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 1rem;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .footer-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-weight: 500;
+    color: #ffffff;
+  }
+
+  .footer-icon {
+    width: 22px;
+    height: 22px;
+    vertical-align: middle;
+    filter: drop-shadow(0 0 3px #fff);
+  }
+
+  .footer-modified {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #dcdcdc;
+  }
+
+  /* Hide Hamburger on large screens */
+  .hamburger {
+    display: none;
+  }
+
+  /* Lightbox enhancements */
+  .lightbox-content {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+
+  .lightbox-caption {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #ffecd2;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  }
+
+  /* Filter Buttons (Optional enhancement) */
+  nav ul li a {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  nav ul li a:hover, nav ul li a.active {
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+}
