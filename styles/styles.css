@@ -1,0 +1,137 @@
+/* ========== GLOBAL STYLES ========== */
+:root {
+  --primary-color: #0a4b24; /* Deep green */
+  --secondary-color: #ffb703; /* Warm gold */
+  --light-bg: #f6f8f7;
+  --overlay-bg: rgba(255, 255, 255, 0.9);
+  --text-color: #222;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  line-height: 1.6;
+}
+
+/* ========== HEADER ========== */
+header {
+  background: linear-gradient(135deg, var(--primary-color), #168f3e);
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+header .logo {
+  height: 60px;
+  margin-bottom: 0.5rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+header .subtitle {
+  font-style: italic;
+  color: #f0f0f0;
+}
+
+/* ========== HERO IMAGE ========== */
+.hero {
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* ========== INFORMATION CONTAINER ========== */
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.data, .weather {
+  flex: 1 1 320px;
+  background-color: var(--overlay-bg);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.data:hover, .weather:hover {
+  transform: translateY(-5px);
+}
+
+.data h2, .weather h2 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  border-bottom: 3px solid var(--secondary-color);
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.3rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin: 0.4rem 0;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+footer img {
+  height: 18px;
+  vertical-align: middle;
+  margin: 0 0.4rem;
+}
+
+footer p:last-child {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #ffeaa7;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .info-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .data, .weather {
+    flex: 1 1 100%;
+  }
+}
