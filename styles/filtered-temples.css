@@ -1,0 +1,161 @@
+/* ===== Global Reset & Base ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root{
+    --brand-1:#08306b;
+    --brand-2:#0a84ff;
+    --card-bg: #ffffff;
+    --muted: #6b7280;
+}
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f4f7fb;
+    color: #111827;
+    line-height: 1.35;
+    -webkit-font-smoothing:antialiased;
+}
+
+/* ===== Header ===== */
+.site-header{
+    background: linear-gradient(135deg,var(--brand-1),var(--brand-2));
+    color: #fff;
+    padding: 18px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 6px 18px rgba(2,6,23,0.12);
+}
+.header-left { display:flex; align-items:center; gap:14px; }
+.site-title { font-size:1.25rem; font-weight:700; letter-spacing:0.2px; }
+
+/* hamburger */
+.hamburger {
+    display:none;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    padding:6px;
+    align-items:center;
+    justify-content:center;
+}
+.hamburger span{
+    display:block;
+    width:18px; height:2px; background:#fff; margin:3px 0; border-radius:2px;
+}
+
+/* nav */
+.top-nav ul{ list-style:none; display:flex; gap:10px; align-items:center; }
+.top-nav button{
+    background:#fff; color:var(--brand-1);
+    border:none; padding:8px 12px; border-radius:8px;
+    font-weight:600; cursor:pointer;
+    transition: transform .18s ease, background .18s ease;
+}
+.top-nav button:hover{ transform:translateY(-2px); background:#ffea7a; color:#000; }
+
+/* ===== Search ===== */
+.search-area{ padding: 14px 18px; text-align:center; }
+.search-area input{
+    width: min(920px, 92%);
+    padding:12px 14px;
+    border-radius:10px;
+    border:1px solid #d1d5db;
+    font-size:1rem;
+}
+
+/* ===== Grid (3 x 3) ===== */
+.temples-container{
+    max-width:1200px;
+    margin:20px auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    padding: 0 16px 40px;
+}
+
+/* temple card */
+.temple-card{
+    position:relative;
+    border-radius:12px;
+    overflow:hidden;
+    background: var(--card-bg);
+    box-shadow: 0 8px 24px rgba(9,30,66,0.08);
+    cursor:pointer;
+    min-height: 280px;
+    transform: translateY(12px);
+    opacity: 0;
+    animation: cardIn .5s ease forwards;
+}
+@keyframes cardIn { to { transform: translateY(0); opacity: 1; } }
+
+.temple-card img{
+    width:100%;
+    height: 220px;
+    object-fit: cover;
+    display:block;
+}
+
+/* Overlay text placed INSIDE each image box (on top) */
+.overlay{
+    position:absolute;
+    left:0; right:0;
+    bottom:0;
+    padding:12px 14px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.6));
+    color: #fff;
+    font-size: 0.95rem;
+}
+.overlay strong{ display:block; font-size:1.05rem; color:#fff; margin-bottom:4px; }
+
+/* small meta row inside overlay */
+.overlay .meta { font-size:0.85rem; color:#f0f7ff; opacity:0.95; }
+
+/* ===== Lightbox ===== */
+.lightbox{
+    display:none;
+    position:fixed; inset:0;
+    background: rgba(3,7,18,0.8);
+    z-index:2000;
+    align-items:center;
+    justify-content:center;
+    padding: 40px;
+}
+.lightbox .lightbox-content{
+    max-width: 90%;
+    max-height: 85%;
+    border-radius:10px;
+}
+.lightbox .close{
+    position: absolute;
+    right:30px;
+    top:18px;
+    font-size:36px;
+    background:transparent; border:none; color:#fff; cursor:pointer;
+}
+
+/* ===== Footer ===== */
+footer{
+    background: linear-gradient(135deg,var(--brand-1),var(--brand-2));
+    color:#fff; padding:18px; text-align:center;
+}
+.footer-icon{ width:18px; height:18px; vertical-align:middle; margin:0 6px; opacity:0.95; }
+
+/* ===== Responsiveness ===== */
+@media (max-width: 900px){
+    .temples-container{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 650px){
+    .temples-container{ grid-template-columns: 1fr; }
+    .top-nav{ display:none; }
+    .hamburger{ display:flex; }
+    .site-title{ font-size:1rem; }
+    .search-area input{ width:94%; }
+}
+
+/* small touch ups */
+.top-nav.show{ display:block; position:absolute; right:12px; top:70px; background:rgba(255,255,255,0.98); padding:10px; border-radius:10px; box-shadow:0 6px 18px rgba(2,6,23,0.12); }

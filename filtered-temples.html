@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filtered Temples</title>
+
+    <!-- link to CSS -->
+    <link rel="stylesheet" href="styles/filtered-temples.css" />
+    <script defer src="scripts/filtered-temples.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-left">
+        <button id="hamburger" class="hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+        <h1 class="site-title">WDD 131: Picture Album</h1>
+    </div>
+
+    <nav id="topNav" class="top-nav" aria-label="Primary">
+        <ul>
+            <li><button data-filter="home">🏠 Home</button></li>
+            <li><button data-filter="old">📜 Old</button></li>
+            <li><button data-filter="new">✨ New</button></li>
+            <li><button data-filter="large">🏯 Large</button></li>
+            <li><button data-filter="small">🏛 Small</button></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Search area -->
+<div class="search-area">
+    <input id="searchInput" type="search" placeholder="Search temples by name or location..." aria-label="Search temples">
+</div>
+
+<!-- Main Content -->
+<main>
+    <section id="temples-container" class="temples-container" aria-live="polite">
+        <!-- cards are rendered dynamically by JS (keeps markup clean and ensures filenames used consistently) -->
+    </section>
+</main>
+
+<footer>
+    <p class="footer-text">
+        © 2025
+        <img src="" id="footer-flower-left" alt="flower" class="footer-icon">
+        Mike George Okello
+        <img src="" id="footer-flower-right" alt="flower" class="footer-icon">
+        Uganda
+    </p>
+    <p class="footer-modified">
+        Last Modification: <span id="lastModified"></span>
+    </p>
+</footer>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" role="dialog" aria-hidden="true">
+    <button class="close" aria-label="Close lightbox">&times;</button>
+    <img class="lightbox-content" id="lightbox-img" alt="">
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+</div>
+
+</body>
+</html>
