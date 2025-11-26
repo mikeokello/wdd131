@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>W05 Project: Website Planning Document — EverSip</title>
+    <link rel="stylesheet" href="styles/siteplan.css" />
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <!-- Logo: if you have an image, keep logo.png in images/; otherwise the placeholder will appear -->
+        <div class="logo-wrap" aria-hidden="false">
+            <img src="images/eversiplogo.webp" alt="EverSip logo" class="logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+            <!-- fallback placeholder (in case logo image missing) -->
+            <div class="logo-placeholder" style="display:none" aria-hidden="true">
+                <span class="logo-initials">ES</span>
+                <small class="logo-tag">EverSip</small>
+            </div>
+        </div>
+
+        <div class="header-text" role="banner">
+            <div class="title">WDD 131: Dynamic Web Fundamentals</div>
+            <div class="subtitle">W05 Project — Website Planning Document</div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Site Information -->
+    <section class="site-info">
+        <h2>Site Name</h2>
+        <p><strong>EverSip Beverages</strong> — a modern, refreshing beverage brand focused on wellness, great taste, and sustainable packaging. The name is concise and brandable for both consumer and retail channels.</p>
+
+        <h2>Site Purpose</h2>
+        <p>This website presents the EverSip brand, highlights product lines, supplies comprehensive ingredient and nutritional data, and provides an accessible channel for customer inquiries and distributor onboarding. Key goals: brand clarity, product discovery, trust-building (ingredient transparency), and clear contact paths for sales/distribution.</p>
+
+        <h2>Scenarios</h2>
+        <ul>
+            <li><strong>Where can I view all the EverSip beverage flavors and their ingredients?</strong><br>
+                A dedicated <em>Products</em> gallery lists each flavor, with high-resolution images, short descriptions, ingredient lists, and nutritional facts. Items include filters (flavor type, sugar level) and a clear "View details" control for each product.</li>
+
+            <li><strong>How can I contact the company to become a distributor?</strong><br>
+                A <em>Contact / Distributor</em> page contains a short inquiry form (company name, contact name, email, region, message), direct email address, and phone number for the sales team. Submitted distributor requests are captured and routed to the EverSip sales inbox.</li>
+        </ul>
+    </section>
+
+    <!-- EverSip Drinks Gallery -->
+    <section class="product-gallery" aria-labelledby="gallery-heading">
+        <h2 id="gallery-heading">EverSip Drinks Gallery</h2>
+        <p>Explore the EverSip range. Click <em>Details</em> for ingredients and nutritional information. Images below are placeholders — replace `drink_*.webp` in the <code>images/</code> folder with your photos.</p>
+
+        <div class="drink-controls">
+            <input type="text" id="search" placeholder="Search flavors (e.g., citrus, berry)" aria-label="Search flavors">
+            <select id="filter" aria-label="Filter by">
+                <option value="">All</option>
+                <option value="low-sugar">Low Sugar</option>
+                <option value="vitamin">Vitamin Boost</option>
+            </select>
+        </div>
+
+        <div class="drink-images" id="productList">
+            <!-- Template item: copy/duplicate as needed. Replace image files in images/ folder. -->
+            <article class="drink-item" tabindex="0" aria-labelledby="d1-title">
+                <img src="images/cold drink4.webp" alt="EverSip Citrus Boost" onerror="this.src='images/drink_placeholder.png'">
+                <div class="drink-body">
+                    <h3 id="d1-title">EverSip Citrus Boost</h3>
+                    <p class="desc">A bright, refreshing citrus infusion with natural vitamin C and light carbonation.</p>
+                    <p class="ingredients"><strong>Ingredients:</strong> Filtered water, natural citrus blend, cane sugar, vitamin C.</p>
+                    <div class="card-actions">
+                        <button class="btn btn-outline">Details</button>
+                        <button class="btn btn-primary">Contact to Order</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="drink-item" tabindex="0" aria-labelledby="d2-title">
+                <img src="images/cold drink2.webp" alt="EverSip Berry Fusion" onerror="this.src='images/drink_placeholder.png'">
+                <div class="drink-body">
+                    <h3 id="d2-title">EverSip Berry Fusion</h3>
+                    <p class="desc">A balanced berry medley, lightly sweetened and rich in antioxidants.</p>
+                    <p class="ingredients"><strong>Ingredients:</strong> Filtered water, berry extract, natural sweetener, antioxidants.</p>
+                    <div class="card-actions">
+                        <button class="btn btn-outline">Details</button>
+                        <button class="btn btn-primary">Contact to Order</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="drink-item" tabindex="0" aria-labelledby="d3-title">
+                <img src="images/cold drink5.webp" alt="EverSip Tropical Splash" onerror="this.src='images/drink_placeholder.png'">
+                <div class="drink-body">
+                    <h3 id="d3-title">EverSip Tropical Splash</h3>
+                    <p class="desc">Sun-kissed tropical flavors blended for a smooth, revitalizing drink.</p>
+                    <p class="ingredients"><strong>Ingredients:</strong> Filtered water, tropical fruit blend, natural flavor, electrolytes.</p>
+                    <div class="card-actions">
+                        <button class="btn btn-outline">Details</button>
+                        <button class="btn btn-primary">Contact to Order</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Wireframes Section: both SVG images and a CSS-only diagram fallback -->
+    <section class="wireframes" aria-labelledby="wireframes-heading">
+        <h2 id="wireframes-heading">Wireframes</h2>
+        <p>Below are visual wireframes for both mobile and large-desktop views. Save the SVGs included in the project as files (`wireframe-mobile.svg`, `wireframe-desktop.svg`) or let these inline images render directly.</p>
+
+        <div class="wireframe-grid">
+            <!-- Inline SVG images (also provided as separate files below) -->
+            <figure>
+                <figcaption>Mobile Wireframe (portrait)</figcaption>
+                <img src="images/wireframe-mobile.svg" alt="Mobile wireframe sketch" class="wireframe-image">
+            </figure>
+
+            <figure>
+                <figcaption>Desktop Wireframe (large desktop)</figcaption>
+                <img src="images/wireframe-desktop.svg" alt="Desktop wireframe sketch" class="wireframe-image">
+            </figure>
+        </div>
+
+        <!-- CSS-only simplified wireframe diagrams for quick printing / HTML-only preview -->
+        <div class="wireframe-css">
+            <div class="wf-mobile">
+                <div class="wf-header">Header (logo + title)</div>
+                <div class="wf-hero">Hero image / promo</div>
+                <div class="wf-grid">
+                    <div class="wf-card">Product 1</div>
+                    <div class="wf-card">Product 2</div>
+                    <div class="wf-card">Product 3</div>
+                </div>
+                <div class="wf-footer">Footer</div>
+            </div>
+
+            <div class="wf-desktop">
+                <div class="wf-header">Header (logo, nav, search)</div>
+                <div class="wf-main">
+                    <div class="wf-aside">Filters / Categories</div>
+                    <div class="wf-content">
+                        <div class="wf-hero">Large hero + CTA</div>
+                        <div class="wf-gridwide">
+                            <div class="wf-card">Product 1</div>
+                            <div class="wf-card">Product 2</div>
+                            <div class="wf-card">Product 3</div>
+                            <div class="wf-card">Product 4</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wf-footer">Footer</div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p class="footer-text">
+        © 2025
+        <img src="images/flower 1.webp" alt="" class="footer-icon" aria-hidden="true">
+        George Mike Okello
+        <img src="images/flower 1.webp" alt="" class="footer-icon" aria-hidden="true">
+        Uganda
+    </p>
+    <p class="footer-modified">Last Modification: <span id="lastModified"></span> (Africa/Kampala)</p>
+</footer>
+
+<script>
+    // Set last modified display to Africa/Kampala time (24-hour)
+    try {
+        const opts = { timeZone: 'Africa/Kampala', year: 'numeric', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+        document.getElementById('lastModified').textContent = new Date().toLocaleString('en-GB', opts);
+    } catch (e) {
+        document.getElementById('lastModified').textContent = new Date().toLocaleString();
+    }
+</script>
+
+</body>
+</html>
