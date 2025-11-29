@@ -1,0 +1,97 @@
+/* GENERAL */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f0ff;
+}
+
+header, footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 1.2rem;
+}
+
+/* FORM CONTAINER */
+.form-container {
+    background-color: #d9ecff;
+    max-width: 650px;
+    margin: 2.5rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* FORM FIELDS */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+input, select, textarea {
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #777;
+    font-size: 1rem;
+}
+
+input[type="submit"] {
+    background-color: #004a99;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+}
+
+/* CUSTOM RATING SYSTEM */
+.rating-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.rating-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rating-item .stars {
+    font-size: 1.3rem;
+    color: #ffcc00;
+    margin-bottom: 4px;
+}
+
+/* Make radio buttons bigger white circles */
+.rating-item input[type="radio"] {
+    width: 22px;
+    height: 22px;
+    accent-color: #004a99;
+}
+
+/* REVIEW PAGE */
+.review-box {
+    background-color: #d9ecff;
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.review-count-box {
+    display: inline-block;
+    background-color: #004a99;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
