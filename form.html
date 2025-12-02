@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Review</title>
     <link rel="stylesheet" href="styles/form_styles.css">
@@ -52,26 +52,29 @@
         <label for="installDate">Date of Installation</label>
         <input type="date" id="installDate" name="installDate" required>
 
-       <fieldset class="features-fieldset">
-    <legend>Useful Features (Check all that apply)</legend>
-    <div class="feature-item">
-        <input type="checkbox" id="ease" name="features" value="Ease of Use">
-        <label for="ease">Ease to Use</label>
-    </div>
-    <div class="feature-item">
-        <input type="checkbox" id="durability" name="features" value="Durability">
-        <label for="durability">Durability</label>
-    </div>
-    <div class="feature-item">
-        <input type="checkbox" id="design" name="features" value="Design">
-        <label for="design">Design</label>
-    </div>
-    <div class="feature-item">
-        <input type="checkbox" id="performance" name="features" value="Performance">
-        <label for="performance">Performance</label>
-    </div>
-</fieldset>
+        <fieldset class="features-fieldset">
+            <legend>Useful Features (Check all that apply)</legend>
 
+            <div class="feature-item">
+                <input type="checkbox" id="ease" name="features" value="Ease of Use">
+                <label for="ease">Ease to Use</label>
+            </div>
+
+            <div class="feature-item">
+                <input type="checkbox" id="durability" name="features" value="Durability">
+                <label for="durability">Durability</label>
+            </div>
+
+            <div class="feature-item">
+                <input type="checkbox" id="design" name="features" value="Design">
+                <label for="design">Design</label>
+            </div>
+
+            <div class="feature-item">
+                <input type="checkbox" id="performance" name="features" value="Performance">
+                <label for="performance">Performance</label>
+            </div>
+        </fieldset>
 
         <label for="review">Written Review (Optional)</label>
         <textarea id="review" name="review" rows="4"></textarea>
