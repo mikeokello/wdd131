@@ -105,15 +105,16 @@ input[type="submit"]:hover {
 .feature-item {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.5rem; /* Space between checkbox and label */
     margin-bottom: 0.5rem;
 }
 
 .feature-item input[type="checkbox"] {
     width: 18px;
     height: 18px;
-    accent-color: #004a99;
+    accent-color: #004a99; /* Matches your form theme */
 }
+
 
 /* REVIEW BOX */
 .review-box {
